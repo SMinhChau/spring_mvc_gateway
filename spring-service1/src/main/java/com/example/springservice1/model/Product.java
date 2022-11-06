@@ -1,17 +1,15 @@
-package com.example.cloud_getway.model;
+package com.example.springservice1.model;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
+import java.io.Serializable;
 
 @Data
-
 @Entity
-@Table(name = "productdb")
-public class Product {
+@Table(name = "productdb", schema = "productDB")
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long orderId;
